@@ -5,7 +5,7 @@ function euclid(...values) {
 		return values[0];
 	}
 
-	var nod = function (val1, val2) {
+	let nod = function (val1, val2) {
 		if (!(val1 && val2)) {
 			return val1 || val2;
 		}
@@ -23,8 +23,8 @@ function euclid(...values) {
 		return val1;
 	}
 
-	for (var i = 0; i < values.length - 1; i++) {
+	for (let i = 0; i < values.length - 1; i++) {
 		values[i + 1] = nod(values[i], values[i + 1]);
 	}
-	return values[i];
+	return values[values.length - 1];
 }
