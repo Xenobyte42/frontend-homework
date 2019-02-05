@@ -6,10 +6,8 @@ function euclid(...values) {
 	}
 
 	var nod = function (val1, val2) {
-		if (val1 === 0) {
-			return val2;
-		} else if (val2 === 0) {
-			return val1;
+		if (!(val1 && val2)) {
+			return val1 || val2;
 		}
 
 		val1 = Math.abs(val1);
