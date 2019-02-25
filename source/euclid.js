@@ -1,6 +1,9 @@
 'use strict';
 
 function euclid(...values) {
+	if (!Array.isArray(values)) {
+		return;
+	}
 	if (values.length === 0) {
 		return;
 	}
